@@ -258,6 +258,10 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
+	measure 'Cantidad registros Promociones' = COUNTROWS(Promotion)
+		formatString: 0
+		lineageTag: d5208d0f-98f8-4eae-988d-58e44d0a1bfe
+
 	partition Medidas = m
 		mode: import
 		source =
