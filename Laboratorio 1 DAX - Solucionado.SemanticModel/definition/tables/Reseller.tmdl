@@ -1,0 +1,217 @@
+table Reseller
+	lineageTag: 4b84970a-dd46-4566-9232-e11a06ebf494
+
+	column ResellerKey
+		dataType: double
+		lineageTag: 53255f41-481b-49c7-917f-0e7d445104e7
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GeographyKey
+		dataType: double
+		lineageTag: d4dfcfdb-471b-42c1-b683-eda1542ac2ff
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResellerAlternateKey
+		dataType: string
+		lineageTag: 82047c11-4472-44e7-a52d-997a7ebe141c
+		summarizeBy: none
+		sourceColumn: ResellerAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Phone
+		dataType: string
+		lineageTag: fe67e742-bb1c-4d95-b6b2-3464af09c90c
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column BusinessType
+		dataType: string
+		lineageTag: 246233af-bb74-4780-a198-34d28cffe4b8
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ResellerName
+		dataType: string
+		lineageTag: d7e9b7cd-da16-4047-9e13-d67b0d859012
+		summarizeBy: none
+		sourceColumn: ResellerName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column NumberEmployees
+		dataType: double
+		lineageTag: 52a3a96f-ab7c-4edf-b471-3929966bff54
+		summarizeBy: none
+		sourceColumn: NumberEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderFrequency
+		dataType: string
+		lineageTag: 423ff4b7-02d2-4055-b54a-91134cb83d73
+		summarizeBy: none
+		sourceColumn: OrderFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column OrderMonth
+		dataType: double
+		lineageTag: 44d3adbf-e15f-4538-b131-b6b4e90559c8
+		summarizeBy: none
+		sourceColumn: OrderMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirstOrderYear
+		dataType: double
+		lineageTag: ad2c0d05-97e5-4d3f-901b-1179a782dbcb
+		summarizeBy: none
+		sourceColumn: FirstOrderYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastOrderYear
+		dataType: double
+		lineageTag: 8c72bf47-4546-455d-bd15-51503cffc2a0
+		summarizeBy: none
+		sourceColumn: LastOrderYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductLine
+		dataType: string
+		lineageTag: 626c178d-f22c-4342-9729-82f6081fad51
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column AddressLine1
+		dataType: string
+		lineageTag: f143ff99-8a97-4486-95c0-aeaa7540cba6
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column AddressLine2
+		dataType: string
+		lineageTag: bcff3d7c-2eba-461f-a46e-05c15ea643e2
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column AnnualSales
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: caa2c419-39f3-467e-9eca-f8258f61e6a9
+		summarizeBy: none
+		sourceColumn: AnnualSales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column BankName
+		dataType: string
+		lineageTag: a788d86f-af3b-4a99-913b-1057c9ed40e9
+		summarizeBy: none
+		sourceColumn: BankName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column MinPaymentType
+		dataType: double
+		lineageTag: 890bb71d-4d21-401f-9f37-920089532b90
+		summarizeBy: none
+		sourceColumn: MinPaymentType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MinPaymentAmount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 553d0f14-1a0e-4705-abe1-dd81db1b1f9e
+		summarizeBy: none
+		sourceColumn: MinPaymentAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column AnnualRevenue
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a57dc730-b3ba-4b39-b5d6-05d2c4011907
+		summarizeBy: none
+		sourceColumn: AnnualRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column YearOpened
+		dataType: double
+		lineageTag: 0a83561b-7fcb-4a64-8b2f-4e76d5369b83
+		summarizeBy: none
+		sourceColumn: YearOpened
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Reseller-674ec4df-2424-4275-a584-a7ae9a10a3bc = m
+		mode: import
+		source =
+				let
+				    Origen = Access.Database(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\AdventureWorks2016DB.accdb"), [CreateNavigationProperties=true]),
+				    _Reseller = Origen{[Schema="",Item="Reseller"]}[Data]
+				in
+				    _Reseller
+
+	annotation PBI_ResultType = Table
+

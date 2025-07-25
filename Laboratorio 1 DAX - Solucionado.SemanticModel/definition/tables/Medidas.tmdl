@@ -1,0 +1,272 @@
+table Medidas
+	lineageTag: dbd831ca-be33-47c0-b00a-f77958e3ca9d
+
+	measure 'Internet Total Sales Amount' =
+			
+			
+			SUM(InternetSales[SalesAmount])
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de agregación
+		lineageTag: 4dc01027-5fa1-4509-a884-82058f1bac34
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Maxima Venta por Internet' = ```
+			
+			
+			MAX(InternetSales[SalesAmount])
+			
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de agregación
+		lineageTag: c9960167-778b-412a-9e47-e54dd353cb55
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Minima Venta por Internet' =
+			
+			MIN(InternetSales[SalesAmount])
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de agregación
+		lineageTag: 8d0f218b-0037-4d48-b8c2-a8e592a7c5a6
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Internet Total OrderQuantity' = SUM(InternetSales[OrderQuantity])
+		displayFolder: Funciones de agregación
+		lineageTag: 229d82ad-1a41-4d23-89db-a2f80467b75b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Internet Total Quantity Red Color' =
+			
+			SUMX(FILTER(InternetSales,RELATED('Product'[Color])="Red"),
+			InternetSales[OrderQuantity])
+		displayFolder: Funciones de iteración
+		lineageTag: a1eee4a6-cb65-46f2-a4c8-3cb099ce7364
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cantidad de Clientes' =
+			
+			
+			COUNT(Customer[CustomerKey])
+		formatString: 0
+		displayFolder: Funciones de agregación
+		lineageTag: 997c2d9d-a82c-45fc-ae7c-e2192cf0aca4
+
+	measure 'Cantidad de registros en Customers' =
+			
+			
+			COUNTROWS(Customer)
+		formatString: 0
+		displayFolder: Funciones de agregación
+		lineageTag: 6d7c3c98-dd4b-49a7-b0ad-1849057446ce
+
+	measure 'Cantidad de Clientes Unicos' =
+			
+			
+			DISTINCTCOUNT(Customer[CustomerKey])
+		formatString: 0
+		displayFolder: Funciones de agregación
+		lineageTag: 2a717255-4d8c-4d62-9450-abce263cb8a0
+
+	measure 'Internet Total Sales amount Category Bicicleta' =
+			
+			
+			CALCULATE(Medidas[Internet Total Sales Amount],
+			FILTER(ProductCategory,ProductCategory[SpanishProductCategoryName]= "Bicicleta"))
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones CALCULATE
+		lineageTag: cc417a5c-9ad8-413f-8ab1-41db86d774f7
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Participacion de categoria bicicleta' = ```
+			
+			
+			
+			var _total = [Internet Total Sales Amount]
+			
+			var _total_bicicleta = [Internet Total Sales amount Category Bicicleta]
+			
+			
+			return
+			
+			DIVIDE(_total_bicicleta,_total,0)
+			
+			
+			```
+		displayFolder: Funciones con variables
+		lineageTag: 6f876b37-9d6c-4b94-b6ab-92a1a09dcb42
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Monto Venta Mes Anterior' = ```
+			
+			
+			CALCULATE([Internet Total Sales Amount],PREVIOUSMONTH(Calendario[Date]))
+			
+			
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: 92f436e8-cc2a-472f-84e5-20981fe54cca
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta Año Anterior' = CALCULATE([Internet Total Sales Amount],SAMEPERIODLASTYEAR(Calendario[Date]))
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: 7a57c01a-2d4b-46e7-8c7a-91d1b4ee30ca
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta Acumulado Año' = ```
+			
+			    
+			    CALCULATE([Internet Total Sales Amount],DATESYTD(Calendario[Date]))
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: c658faf9-4bfc-45ed-9c17-9d1871be3207
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta Acumulado Año v2' = ```
+			
+			    
+			    IF(
+			  [Internet Total Sales Amount] = BLANK(),BLANK(),[Monto Venta Acumulado Año])
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: 51078a67-a247-4fda-8a36-4a6d18acb381
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta Acumulado Año FY' = ```
+			
+			    
+			    CALCULATE([Internet Total Sales Amount],DATESYTD(Calendario[Date],"30/10"))
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: 30c8822f-2505-44af-8f8a-98aa3d78348b
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta Acumulado Quarter' = ```
+			
+			
+			VAR _MontoVtaQuarter = CALCULATE(  [Internet Total Sales Amount],DATESQTD(Calendario[Date]))
+			
+			
+			RETURN  
+			
+			    IF(
+			  [Internet Total Sales Amount] = BLANK(),BLANK() , _MontoVtaQuarter)
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: f7ab0ead-0e0f-4879-a6f7-baa8b3f4300f
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Monto Venta variacion Mes' = ```
+			
+			    
+			CALCULATE([Internet Total Sales Amount], DATEADD( Calendario[Date], -1, MONTH))
+			```
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Funciones de Inteligencia de Tiempo
+		lineageTag: a2ef42c5-bcfc-40ac-ac53-818670b0358b
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'YoY% de Internet Total Sales Amount' =
+			
+			VAR __PREV_YEAR =
+				CALCULATE(
+					[Internet Total Sales Amount],
+					DATEADD('Calendario'[Date], -1, YEAR)
+				)
+			RETURN
+				DIVIDE([Internet Total Sales Amount] - __PREV_YEAR, __PREV_YEAR)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Medidas Rapidas
+		lineageTag: 730985f6-e78a-4852-a900-aa68f690dffd
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "YearOverYear"
+				}
+
+	measure 'Diferencia entre Internet Total Sales Amount y Prenda' =
+			
+			VAR __BASELINE_VALUE =
+				CALCULATE(
+					[Internet Total Sales Amount],
+					'ProductCategory'[SpanishProductCategoryName] IN { "Prenda" }
+				)
+			VAR __MEASURE_VALUE = [Internet Total Sales Amount]
+			RETURN
+				IF(NOT ISBLANK(__MEASURE_VALUE), __MEASURE_VALUE - __BASELINE_VALUE)
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Medidas Rapidas
+		lineageTag: 24db3531-34f8-488e-b47b-f20180591998
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "DifferenceFrom"
+				}
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Diferencia porcentual entre Internet Total Sales Amount y Prenda' =
+			
+			VAR __BASELINE_VALUE =
+				CALCULATE(
+					[Internet Total Sales Amount],
+					'ProductCategory'[SpanishProductCategoryName] IN { "Prenda" }
+				)
+			VAR __MEASURE_VALUE = [Internet Total Sales Amount]
+			RETURN
+				IF(
+					NOT ISBLANK(__MEASURE_VALUE),
+					DIVIDE(__MEASURE_VALUE - __BASELINE_VALUE, __BASELINE_VALUE)
+				)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Medidas Rapidas
+		lineageTag: e6d65e7d-29a1-4f36-82b1-661568ee2dc4
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "PercentageDifferenceFrom"
+				}
+
+	measure 'Monto Vta Fecha Envio' =
+			
+			
+			CALCULATE([Internet Total Sales Amount],USERELATIONSHIP(OrderDate[DateKey],InternetSales[ShipDateKey]))
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: Relaciones Inactivas
+		lineageTag: efd96d7c-8d43-4aa2-be78-cbe9b074f4d5
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

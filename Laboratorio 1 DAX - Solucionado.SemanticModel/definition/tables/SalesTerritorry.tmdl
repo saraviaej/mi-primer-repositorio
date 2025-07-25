@@ -1,0 +1,72 @@
+table SalesTerritorry
+	lineageTag: 6b73ae4d-b642-4cd0-b023-478746033b48
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c170cca8-e61b-4c38-9e52-f47f4a473315
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c2f5d4bf-66f7-4c9e-a096-6237588bef4c
+		summarizeBy: count
+		sourceColumn: SalesTerritoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryRegion
+		dataType: string
+		lineageTag: db7f41c6-0da6-4649-a9a5-8dde7081d37d
+		summarizeBy: none
+		sourceColumn: SalesTerritoryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SalesTerritoryCountry
+		dataType: string
+		lineageTag: f1be2d08-db93-4cdc-88aa-52f087705180
+		summarizeBy: none
+		sourceColumn: SalesTerritoryCountry
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SalesTerritoryGroup
+		dataType: string
+		lineageTag: a6cb5cfa-709f-48c6-bf40-152c5a221de1
+		summarizeBy: none
+		sourceColumn: SalesTerritoryGroup
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SalesTerritoryImage
+		dataType: string
+		lineageTag: 3d86c62e-5277-4461-b17f-3387c3a09045
+		summarizeBy: none
+		sourceColumn: SalesTerritoryImage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition SalesTerritorry-d5046cb9-273b-4e61-9ef0-670fd7b31671 = m
+		mode: import
+		source =
+				let
+				    Origen = Access.Database(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\AdventureWorks2016DB.accdb"), [CreateNavigationProperties=true]),
+				    _SalesTerritorry = Origen{[Schema="",Item="SalesTerritorry"]}[Data]
+				in
+				    _SalesTerritorry
+
+	annotation PBI_ResultType = Table
+

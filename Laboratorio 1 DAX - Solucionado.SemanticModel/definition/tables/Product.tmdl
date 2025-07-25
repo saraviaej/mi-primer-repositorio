@@ -1,0 +1,366 @@
+table Product
+	lineageTag: 8b422dc0-0e5a-4254-88b7-15818bda102e
+
+	column ProductKey
+		dataType: double
+		lineageTag: 23701e9f-4076-43e2-833e-e3ea9c789ae1
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductAlternateKey
+		dataType: string
+		lineageTag: b471d6f6-f78e-4a63-acc3-c7aa6b474391
+		summarizeBy: none
+		sourceColumn: ProductAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ProductSubcategoryKey
+		dataType: string
+		lineageTag: bd92209c-ddbd-4d01-bfde-531f76cc1843
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column WeightUnitMeasureCode
+		dataType: string
+		lineageTag: 20f50190-86a3-4664-8c18-8508b7ca77d3
+		summarizeBy: none
+		sourceColumn: WeightUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SizeUnitMeasureCode
+		dataType: string
+		lineageTag: c1c5d11a-85c8-4c14-a737-d3ccc92dfccb
+		summarizeBy: none
+		sourceColumn: SizeUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column EnglishProductName
+		dataType: string
+		lineageTag: 3f95b272-a4f6-45d1-a2b2-94021755cbfd
+		summarizeBy: none
+		sourceColumn: EnglishProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishProductName
+		dataType: string
+		lineageTag: 822191d5-438f-4ded-ade3-f6dbbd547139
+		summarizeBy: none
+		sourceColumn: SpanishProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchProductName
+		dataType: string
+		lineageTag: 7ef48f32-7408-4876-9cb1-883b2eb3b737
+		summarizeBy: none
+		sourceColumn: FrenchProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column StandardCost
+		dataType: string
+		lineageTag: c2c2ad43-a49a-4392-9eb5-ed9a49050802
+		summarizeBy: none
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FinishedGoodsFlag
+		dataType: double
+		lineageTag: 7fc6f2a5-a37b-44fa-872d-2c91957fc1d2
+		summarizeBy: sum
+		sourceColumn: FinishedGoodsFlag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Color
+		dataType: string
+		lineageTag: a6433b22-196e-4c5a-a116-aac955734b0b
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SafetyStockLevel
+		dataType: double
+		lineageTag: d2dc71de-7c60-4098-b99d-739c8ce09528
+		summarizeBy: sum
+		sourceColumn: SafetyStockLevel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReorderPoint
+		dataType: double
+		lineageTag: beab18ce-0201-4162-8bf6-99e331eb26aa
+		summarizeBy: sum
+		sourceColumn: ReorderPoint
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ListPrice
+		dataType: string
+		lineageTag: 0faeb4e3-1682-4f14-a87e-daac46f9c8af
+		summarizeBy: none
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Size
+		dataType: string
+		lineageTag: 0b4c6ebb-2fab-4dff-a2ea-805faa320ed4
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SizeRange
+		dataType: string
+		lineageTag: d27ac4b2-c2a0-4c9f-b077-97b4f45392c2
+		summarizeBy: none
+		sourceColumn: SizeRange
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Weight
+		dataType: string
+		lineageTag: dd176491-4e5d-4b42-8d78-73473e78743d
+		summarizeBy: none
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column DaysToManufacture
+		dataType: double
+		lineageTag: 1c4f7dc5-1f02-4845-a766-a5fc6da1fcde
+		summarizeBy: sum
+		sourceColumn: DaysToManufacture
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductLine
+		dataType: string
+		lineageTag: 4a88f61b-cca7-4fe3-acce-7666d43ee1d1
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column DealerPrice
+		dataType: string
+		lineageTag: 5046c1bc-4f31-430f-b2e3-fb2cf3c27e29
+		summarizeBy: none
+		sourceColumn: DealerPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Class
+		dataType: string
+		lineageTag: 5592e5e6-ac76-4ba9-91ec-cb487dfd83cc
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Style
+		dataType: string
+		lineageTag: 3e12e223-3329-4835-92a3-702acfd3f70b
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ModelName
+		dataType: string
+		lineageTag: b11a8d28-e258-4315-a726-b4607f2f0712
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column EnglishDescription
+		dataType: string
+		lineageTag: 5dd183cb-6234-40f8-a067-8d5f81aa2220
+		summarizeBy: none
+		sourceColumn: EnglishDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchDescription
+		dataType: string
+		lineageTag: ed0d40fb-bd4e-434e-8d36-407a6a168ffa
+		summarizeBy: none
+		sourceColumn: FrenchDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ChineseDescription
+		dataType: string
+		lineageTag: 51dfaaf9-7817-44ba-97be-bdf7ba4b9686
+		summarizeBy: none
+		sourceColumn: ChineseDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ArabicDescription
+		dataType: string
+		lineageTag: 3de6e94c-2a22-46f2-9b4b-46d12edced3a
+		summarizeBy: none
+		sourceColumn: ArabicDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column HebrewDescription
+		dataType: string
+		lineageTag: a49ecb42-5dbd-4143-99fb-a044cf4686dd
+		summarizeBy: none
+		sourceColumn: HebrewDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ThaiDescription
+		dataType: string
+		lineageTag: 449000b0-1d06-442e-962c-17a7140b77d9
+		summarizeBy: none
+		sourceColumn: ThaiDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column GermanDescription
+		dataType: string
+		lineageTag: 0f6dd4f1-87cd-4f0f-93c0-d274fd8dab72
+		summarizeBy: none
+		sourceColumn: GermanDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column JapaneseDescription
+		dataType: string
+		lineageTag: 44577c9c-fafe-4e03-abd2-59a4aec6af42
+		summarizeBy: none
+		sourceColumn: JapaneseDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column TurkishDescription
+		dataType: string
+		lineageTag: 6a5825b8-a4ab-4d4b-a33e-f4c1e7e75978
+		summarizeBy: none
+		sourceColumn: TurkishDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 925addd9-be74-461a-8def-86bf47073bb4
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variación
+			isDefault
+			relationship: 8e739d83-83e8-41f4-ad46-44f33d49875a
+			defaultHierarchy: LocalDateTable_fd2d0f2e-719c-4ce2-84da-41a42fc68962.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: string
+		lineageTag: 12f7fa57-1170-4020-9e35-55e2338d4e85
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Status
+		dataType: string
+		lineageTag: 48befa85-0eb3-47b4-92da-6cc822da88d7
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Product-b06af3cf-ac74-44ed-aeff-f70c405a3af6 = m
+		mode: import
+		source =
+				let
+				    Origen = Access.Database(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\AdventureWorks2016DB.accdb"), [CreateNavigationProperties=true]),
+				    _Product = Origen{[Schema="",Item="Product"]}[Data]
+				in
+				    _Product
+

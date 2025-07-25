@@ -1,0 +1,52 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.145.1262.0 (25.07)+10bdeda5ab0db954b2cf824e7a117ad7cee97f88
+
+annotation PBI_QueryOrder = ["Customer","Employee","InternetSales","Product","ProductCategory","ProductSubCategory","Promotion","Reseller","ResellerSales","SalesTerritorry","OrderDate","Geography","Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Customer
+ref table DateTableTemplate_71c48637-141a-4f12-8509-a320066801c6
+ref table LocalDateTable_e0ca3461-c4eb-41d2-92fc-296d811d0810
+ref table LocalDateTable_410ef766-42d1-4aee-8a99-0f41c6fbdacf
+ref table Employee
+ref table LocalDateTable_8bb69f36-4006-48e6-bafc-104bb17aa0c0
+ref table LocalDateTable_86e79365-398a-4da8-a8bc-7e1c39468b81
+ref table LocalDateTable_5722a838-864d-4740-bfff-8a0978dca8b8
+ref table LocalDateTable_8b16d232-56aa-483d-a3e0-28aacdc2f892
+ref table InternetSales
+ref table LocalDateTable_9bdfd705-f81f-4df0-a620-4b0bb91e4260
+ref table LocalDateTable_718002e3-9ecf-4358-93ae-7efa204b7e8d
+ref table Product
+ref table LocalDateTable_fd2d0f2e-719c-4ce2-84da-41a42fc68962
+ref table ProductCategory
+ref table ProductSubCategory
+ref table Promotion
+ref table LocalDateTable_e3654f57-4372-494e-9a17-2bf11a4bde91
+ref table LocalDateTable_8972bbf3-28b2-4aad-a7c7-7c10deb13ba9
+ref table Reseller
+ref table ResellerSales
+ref table LocalDateTable_58f80f4b-3d99-4015-bd5a-154f11b4b454
+ref table LocalDateTable_fb82ad8f-2921-4d9c-b091-12175b0f402b
+ref table LocalDateTable_49ef77fb-bc75-4614-b3b2-e0661459c1ca
+ref table SalesTerritorry
+ref table OrderDate
+ref table LocalDateTable_28a0e7c6-64eb-43a7-bfd4-f18ddabcdf2e
+ref table Geography
+ref table Medidas
+ref table Calendario
+ref table 'Lista de Clientes'
+ref table 'Lista de Clientes SELECTCOLUMNS'
+ref table 'Lista de Clientes ADDCOLUMNS'
+
+ref cultureInfo es-ES
+

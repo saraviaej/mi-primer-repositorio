@@ -1,0 +1,123 @@
+table Geography
+	lineageTag: 14155711-b12d-4fd2-997c-19cd65e7776a
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: def5651e-3a9a-4ba3-a01e-5b4d7919b871
+		summarizeBy: count
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 2dee1cfd-bb9a-4225-85d7-f52d7bf6fae1
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column StateProvinceCode
+		dataType: string
+		lineageTag: e19ea474-1730-47d6-bd7a-b4e186f86cd2
+		summarizeBy: none
+		sourceColumn: StateProvinceCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column StateProvinceName
+		dataType: string
+		lineageTag: 4bdf74e1-cdf8-4b3e-abbc-abc10aa11ea7
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: 1b69d42d-7908-4d9f-880a-957bf825d5c1
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column EnglishCountryRegionName
+		dataType: string
+		lineageTag: 56043aaf-3ad3-4a46-85a1-c967d5888bec
+		summarizeBy: none
+		sourceColumn: EnglishCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishCountryRegionName
+		dataType: string
+		lineageTag: 986bd50a-a56f-447c-870a-2fb1a6bf0ce0
+		summarizeBy: none
+		sourceColumn: SpanishCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchCountryRegionName
+		dataType: string
+		lineageTag: dfe95c6c-c48f-4332-8776-9f16b176a2f6
+		summarizeBy: none
+		sourceColumn: FrenchCountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column PostalCode
+		dataType: string
+		lineageTag: 723fb8f8-9f5c-4148-8d81-2ee6ad0da45a
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a51363a6-2a29-44b0-8536-3515ab2de86a
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column IpAddressLocator
+		dataType: string
+		lineageTag: 6195a320-591a-4e60-ba9f-d4cf32b6d76f
+		summarizeBy: none
+		sourceColumn: IpAddressLocator
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Geography-f634e9e9-287e-4f6d-979f-338d76a1c5f8 = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\GEography.txt"),[Delimiter=",", Columns=11, Encoding=1200, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"GeographyKey", Int64.Type}, {"City", type text}, {"StateProvinceCode", type text}, {"StateProvinceName", type text}, {"CountryRegionCode", type text}, {"EnglishCountryRegionName", type text}, {"SpanishCountryRegionName", type text}, {"FrenchCountryRegionName", type text}, {"PostalCode", type text}, {"SalesTerritoryKey", Int64.Type}, {"IpAddressLocator", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

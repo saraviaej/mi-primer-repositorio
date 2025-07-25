@@ -1,0 +1,32 @@
+table 'Lista de Clientes ADDCOLUMNS'
+	lineageTag: 10c701ec-63d1-4cfa-a4f1-7c902bd481c9
+
+	column FirstName
+		lineageTag: aa3e5365-68f5-46a5-b9f6-7b4a678756ef
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Lista de Clientes[FirstName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Columna agregada'
+		lineageTag: f757b367-d349-4cc6-a7dd-ea3586dd6fcb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Columna agregada]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Lista de Clientes ADDCOLUMNS' = calculated
+		mode: import
+		source = ```
+				
+				
+				 
+				    ADDCOLUMNS(VALUES('Lista de Clientes'),
+				    "Columna agregada",'Lista de Clientes'[FirstName]
+				    )
+				```
+
+	annotation PBI_Id = 2c3d599a757f42b38583ea201ea7334e
+

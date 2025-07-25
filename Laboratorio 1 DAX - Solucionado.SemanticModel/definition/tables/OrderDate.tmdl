@@ -1,0 +1,221 @@
+table OrderDate
+	lineageTag: 43c54282-a6c2-4dbe-92e5-7c5b6fa55eba
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ef7261a-540a-43da-8e07-47eb6b0cc421
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 132e3321-74bd-4f1f-afdb-33b070560cab
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		variation Variación
+			isDefault
+			relationship: abe660bf-ba5f-4587-a328-23d816b3e0fe
+			defaultHierarchy: LocalDateTable_28a0e7c6-64eb-43a7-bfd4-f18ddabcdf2e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayNumberOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: e71215e5-d386-4dc3-87fa-622deb093dcb
+		summarizeBy: sum
+		sourceColumn: DayNumberOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishDayNameOfWeek
+		dataType: string
+		lineageTag: 17d7db36-8245-4986-9a08-55fee3e6a78e
+		summarizeBy: none
+		sourceColumn: EnglishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishDayNameOfWeek
+		dataType: string
+		lineageTag: 0de2d42b-aec1-4c0b-b119-63bd224a73bb
+		summarizeBy: none
+		sourceColumn: SpanishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchDayNameOfWeek
+		dataType: string
+		lineageTag: 62f4006b-e5f6-41b6-aab0-2577c01ebca0
+		summarizeBy: none
+		sourceColumn: FrenchDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column DayNumberOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: a549cd1d-0c33-4019-91a4-5c603df4246a
+		summarizeBy: sum
+		sourceColumn: DayNumberOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 544eb668-b8f4-4817-95c3-c997bbeb33f3
+		summarizeBy: sum
+		sourceColumn: DayNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: abce11f7-a106-4336-ae9e-5a4cc513ad79
+		summarizeBy: sum
+		sourceColumn: WeekNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishMonthName
+		dataType: string
+		lineageTag: afb0968d-d320-4987-ad68-0a001370b8af
+		summarizeBy: none
+		sourceColumn: EnglishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishMonthName
+		dataType: string
+		lineageTag: bae4e4dd-a99d-4f35-853c-fadda3e0b855
+		summarizeBy: none
+		sourceColumn: SpanishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchMonthName
+		dataType: string
+		lineageTag: 2ccb49c6-50dc-4bac-b313-7b3900f1a321
+		summarizeBy: none
+		sourceColumn: FrenchMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column MonthNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a718485-c7dc-4d0a-a092-bcc7e9a936dd
+		summarizeBy: sum
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c69db16-57d9-4ae9-88ac-6300b2daf6bb
+		summarizeBy: sum
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 35050540-99e0-4b48-8fdd-96bae3c932be
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: b7998c90-f8f1-43a7-aa24-bb7a7bef6c88
+		summarizeBy: sum
+		sourceColumn: CalendarSemester
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 8eb52400-ca2e-4c1d-a075-a77df86972dc
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: df192a6d-8aba-40b1-a9c8-7ef44951ba6c
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: df458fa7-904d-40f4-a2b2-c2f62524d8b2
+		summarizeBy: sum
+		sourceColumn: FiscalSemester
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año = YEAR(OrderDate[FullDateAlternateKey])
+		formatString: 0
+		lineageTag: b01d221f-6aa2-483b-b190-50ca8b903c8e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column Mes = MONTH(OrderDate[FullDateAlternateKey])
+		formatString: 0
+		lineageTag: 5b5b26a8-70a5-42c2-b484-7da3968b6dc4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia = DAY(OrderDate[FullDateAlternateKey])
+		formatString: 0
+		lineageTag: ce771b9f-f79f-4f64-ab4e-5453c941a20f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition OrderDate-1ba53fdc-0efe-45ce-b14c-f7c1b1d4822d = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\Date.xlsx"), null, true),
+				    Date_Sheet = Origen{[Item="Date",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Date_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"DateKey", Int64.Type}, {"FullDateAlternateKey", type date}, {"DayNumberOfWeek", Int64.Type}, {"EnglishDayNameOfWeek", type text}, {"SpanishDayNameOfWeek", type text}, {"FrenchDayNameOfWeek", type text}, {"DayNumberOfMonth", Int64.Type}, {"DayNumberOfYear", Int64.Type}, {"WeekNumberOfYear", Int64.Type}, {"EnglishMonthName", type text}, {"SpanishMonthName", type text}, {"FrenchMonthName", type text}, {"MonthNumberOfYear", Int64.Type}, {"CalendarQuarter", Int64.Type}, {"CalendarYear", Int64.Type}, {"CalendarSemester", Int64.Type}, {"FiscalQuarter", Int64.Type}, {"FiscalYear", Int64.Type}, {"FiscalSemester", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

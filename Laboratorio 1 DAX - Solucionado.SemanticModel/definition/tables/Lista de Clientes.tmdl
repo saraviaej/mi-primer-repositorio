@@ -1,0 +1,22 @@
+table 'Lista de Clientes'
+	lineageTag: 61755769-c0bb-4906-8c52-f26d3ce03be9
+
+	column FirstName
+		lineageTag: 2ab5a702-4222-4e64-ac27-4a1a983b995a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Customer[FirstName]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Lista de Clientes' = calculated
+		mode: import
+		source = ```
+				
+				
+				 VALUES(Customer[FirstName])
+				 
+				```
+
+	annotation PBI_Id = 3aa959e38d674fe3b10acc1c30f9969f
+

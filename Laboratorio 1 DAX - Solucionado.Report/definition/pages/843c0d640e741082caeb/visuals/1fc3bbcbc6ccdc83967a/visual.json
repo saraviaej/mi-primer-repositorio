@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "1fc3bbcbc6ccdc83967a",
+  "position": {
+    "x": 20.912863070539419,
+    "y": 37.344398340248965,
+    "z": 0,
+    "height": 561.65975103734445,
+    "width": 512.36514522821585
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calendario"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "Sum(Calendario.Año)",
+              "nativeQueryRef": "Año1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calendario"
+                    }
+                  },
+                  "Property": "NroMes"
+                }
+              },
+              "queryRef": "Sum(Calendario.NroMes)",
+              "nativeQueryRef": "NroMes1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calendario"
+                    }
+                  },
+                  "Property": "NombreMes"
+                }
+              },
+              "queryRef": "Calendario.NombreMes",
+              "nativeQueryRef": "NombreMes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "YoY% de Internet Total Sales Amount"
+                }
+              },
+              "queryRef": "Medidas.YoY% de Internet Total Sales Amount",
+              "nativeQueryRef": "YoY% de Internet Total Sales Amount"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

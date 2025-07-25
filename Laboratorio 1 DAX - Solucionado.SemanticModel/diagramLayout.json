@@ -1,0 +1,228 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 707.5,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 625.35179282868512,
+            "y": 0
+          },
+          "nodeIndex": "Customer",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1688.1661354581672,
+            "y": 446.97968127490032
+          },
+          "nodeIndex": "Employee",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1170.6007046994318,
+            "y": 0
+          },
+          "nodeIndex": "InternetSales",
+          "nodeLineageTag": "85b496b7-1688-4bf9-9442-bff03023f1a4",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 558.086454183267,
+            "y": 688.74980079681268
+          },
+          "nodeIndex": "Product",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 653.5
+          },
+          "nodeIndex": "ProductCategory",
+          "size": {
+            "height": 245,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 288.36533864541832,
+            "y": 395.76852589641436
+          },
+          "nodeIndex": "ProductSubCategory",
+          "size": {
+            "height": 269,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1534.8932270916337,
+            "y": 765.596015936255
+          },
+          "nodeIndex": "Promotion",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1162.1549800796815,
+            "y": 1060.7422310756972
+          },
+          "nodeIndex": "Reseller",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 855.6043824701195,
+            "y": 871.23027888446211
+          },
+          "nodeIndex": "ResellerSales",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1280.4509960159362,
+            "y": 472.93466135458169
+          },
+          "nodeIndex": "SalesTerritorry",
+          "size": {
+            "height": 269,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1646.0207824220695,
+            "y": 0
+          },
+          "nodeIndex": "OrderDate",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 836.73107569721117,
+            "y": 407.5637450199203
+          },
+          "nodeIndex": "Geography",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1972.1661354581672,
+            "y": 646.8711155378486
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "dbd831ca-be33-47c0-b00a-f77958e3ca9d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2256.1661354581674,
+            "y": 598.8711155378486
+          },
+          "nodeIndex": "Calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2540.1661354581674,
+            "y": 598.8711155378486
+          },
+          "nodeIndex": "Lista de Clientes",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2824.1661354581674,
+            "y": 598.8711155378486
+          },
+          "nodeIndex": "Lista de Clientes SELECTCOLUMNS",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3108.1661354581674,
+            "y": 598.8711155378486
+          },
+          "nodeIndex": "Lista de Clientes ADDCOLUMNS",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

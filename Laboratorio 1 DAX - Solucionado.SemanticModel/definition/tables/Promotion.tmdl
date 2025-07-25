@@ -1,0 +1,180 @@
+table Promotion
+	lineageTag: 2d011190-fa12-4c8d-8da4-de10208844bc
+
+	column PromotionKey
+		dataType: double
+		lineageTag: 6ea283ff-d52b-4afc-aec2-cc23802cac08
+		summarizeBy: none
+		sourceColumn: PromotionKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PromotionAlternateKey
+		dataType: double
+		lineageTag: 75e2619b-3ab9-4d41-b502-d08445b52483
+		summarizeBy: count
+		sourceColumn: PromotionAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EnglishPromotionName
+		dataType: string
+		lineageTag: ed73b5b4-943c-45c5-bce6-5543b3eac08c
+		summarizeBy: none
+		sourceColumn: EnglishPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishPromotionName
+		dataType: string
+		lineageTag: 08fbc366-9ba9-49e0-9095-253d35ea009b
+		summarizeBy: none
+		sourceColumn: SpanishPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchPromotionName
+		dataType: string
+		lineageTag: 80fae22d-3c63-433e-9a89-272d06354e3e
+		summarizeBy: none
+		sourceColumn: FrenchPromotionName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column DiscountPct
+		dataType: double
+		lineageTag: 784efd86-1160-4e72-9696-d3d3fbe7046e
+		summarizeBy: sum
+		sourceColumn: DiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EnglishPromotionType
+		dataType: string
+		lineageTag: d6a9f538-4e4f-41b4-bf51-d63b27adb0f6
+		summarizeBy: none
+		sourceColumn: EnglishPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishPromotionType
+		dataType: string
+		lineageTag: 1f04cf9a-a8f2-470f-951a-feecf0d20dbe
+		summarizeBy: none
+		sourceColumn: SpanishPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchPromotionType
+		dataType: string
+		lineageTag: 49996915-9c73-4acf-998c-5c610b6a16e7
+		summarizeBy: none
+		sourceColumn: FrenchPromotionType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column EnglishPromotionCategory
+		dataType: string
+		lineageTag: 7093a9a1-32fe-4259-a35b-6c36b2cfb10f
+		summarizeBy: none
+		sourceColumn: EnglishPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishPromotionCategory
+		dataType: string
+		lineageTag: 0e79f512-0195-408b-9277-6d710c80783d
+		summarizeBy: none
+		sourceColumn: SpanishPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchPromotionCategory
+		dataType: string
+		lineageTag: 881f5082-9f43-4dfc-9367-955277b46e19
+		summarizeBy: none
+		sourceColumn: FrenchPromotionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dcda99f1-7ae1-4583-8abb-b412125932be
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variación
+			isDefault
+			relationship: 523d72a3-c3f2-4cfa-abf9-d2c67d1e8853
+			defaultHierarchy: LocalDateTable_e3654f57-4372-494e-9a17-2bf11a4bde91.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 155eefe9-5f81-4e58-a30e-13b5baddd783
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variación
+			isDefault
+			relationship: 2da72c9e-954f-40c3-baf2-1d24f2fc78fa
+			defaultHierarchy: LocalDateTable_8972bbf3-28b2-4aad-a7c7-7c10deb13ba9.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinQty
+		dataType: double
+		lineageTag: a8548c93-5955-402c-b0c9-193f69822491
+		summarizeBy: sum
+		sourceColumn: MinQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MaxQty
+		dataType: double
+		lineageTag: 048e339d-9e13-4822-8340-0b4cd09ed441
+		summarizeBy: sum
+		sourceColumn: MaxQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Promotion-aa1335f4-92e7-4892-af56-3eee3ee73e78 = m
+		mode: import
+		source =
+				let
+				    Origen = Access.Database(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\AdventureWorks2016DB.accdb"), [CreateNavigationProperties=true]),
+				    _Promotion = Origen{[Schema="",Item="Promotion"]}[Data]
+				in
+				    _Promotion
+

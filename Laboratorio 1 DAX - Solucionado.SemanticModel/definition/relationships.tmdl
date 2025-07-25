@@ -1,0 +1,146 @@
+relationship 04d70ff0-4bbd-4d86-af21-76d4c444a45b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Customer.BirthDate
+	toColumn: LocalDateTable_e0ca3461-c4eb-41d2-92fc-296d811d0810.Date
+
+relationship c6e01eae-361c-4941-bc07-c557052d4f73
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Customer.DateFirstPurchase
+	toColumn: LocalDateTable_410ef766-42d1-4aee-8a99-0f41c6fbdacf.Date
+
+relationship c32e3dbe-222e-4228-ae72-0dff82f4e489
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.HireDate
+	toColumn: LocalDateTable_8bb69f36-4006-48e6-bafc-104bb17aa0c0.Date
+
+relationship 3a84a908-3e6e-4383-8dcd-0cbb4c5cd481
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.BirthDate
+	toColumn: LocalDateTable_86e79365-398a-4da8-a8bc-7e1c39468b81.Date
+
+relationship 5ad7c98e-1ece-444a-b653-95a797d785cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.StartDate
+	toColumn: LocalDateTable_5722a838-864d-4740-bfff-8a0978dca8b8.Date
+
+relationship ef7fbeb6-f061-452a-8ca0-c4d4e78564ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.EndDate
+	toColumn: LocalDateTable_8b16d232-56aa-483d-a3e0-28aacdc2f892.Date
+
+relationship 381b86bd-201a-4048-adb7-8a64079d01c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: InternetSales.DueDate
+	toColumn: LocalDateTable_9bdfd705-f81f-4df0-a620-4b0bb91e4260.Date
+
+relationship a00f02a0-0248-443c-982a-a0d69a7aeb37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: InternetSales.ShipDate
+	toColumn: LocalDateTable_718002e3-9ecf-4358-93ae-7efa204b7e8d.Date
+
+relationship 8e739d83-83e8-41f4-ad46-44f33d49875a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Product.StartDate
+	toColumn: LocalDateTable_fd2d0f2e-719c-4ce2-84da-41a42fc68962.Date
+
+relationship 523d72a3-c3f2-4cfa-abf9-d2c67d1e8853
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Promotion.StartDate
+	toColumn: LocalDateTable_e3654f57-4372-494e-9a17-2bf11a4bde91.Date
+
+relationship 2da72c9e-954f-40c3-baf2-1d24f2fc78fa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Promotion.EndDate
+	toColumn: LocalDateTable_8972bbf3-28b2-4aad-a7c7-7c10deb13ba9.Date
+
+relationship 89970c85-aa6c-4e0c-8525-40692efb194f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ResellerSales.OrderDate
+	toColumn: LocalDateTable_58f80f4b-3d99-4015-bd5a-154f11b4b454.Date
+
+relationship ad328aa3-b054-465e-bed4-48c4968a3be3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ResellerSales.DueDate
+	toColumn: LocalDateTable_fb82ad8f-2921-4d9c-b091-12175b0f402b.Date
+
+relationship 11c60c90-ac1e-43ce-8561-39d624dbddeb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ResellerSales.ShipDate
+	toColumn: LocalDateTable_49ef77fb-bc75-4614-b3b2-e0661459c1ca.Date
+
+relationship cfc0003e-dfff-4057-9882-f06bfc00b04d
+	fromColumn: InternetSales.CustomerKey
+	toColumn: Customer.CustomerKey
+
+relationship 1fb88688-21fe-4ec2-8268-3b3f7a1c8ff3
+	fromColumn: ResellerSales.EmployeeKey
+	toColumn: Employee.EmployeeKey
+
+relationship c4ba3732-4964-49e5-a683-4266dadc381d
+	fromColumn: InternetSales.ProductKey
+	toColumn: Product.ProductKey
+
+relationship eca14233-4b7a-40d2-8694-46046887c4ba
+	fromColumn: InternetSales.PromotionKey
+	toColumn: Promotion.PromotionKey
+
+relationship 441c9393-eb13-4762-b400-70ad41bcf6b6
+	fromColumn: InternetSales.SalesTerritoryKey
+	toColumn: SalesTerritorry.SalesTerritoryKey
+
+relationship cb6ce24b-7112-470c-b66d-3c836ffdb377
+	fromColumn: Product.ProductSubcategoryKey
+	toColumn: ProductSubCategory.ProductSubcategoryKey
+
+relationship ff7f559d-aecc-423f-b9b8-e78085dec57e
+	fromColumn: ResellerSales.ProductKey
+	toColumn: Product.ProductKey
+
+relationship 18cca5f5-84a7-4015-8194-3bc8dbb2a578
+	fromColumn: ProductSubCategory.ProductCategoryKey
+	toColumn: ProductCategory.ProductCategoryKey
+
+relationship 1acfba2e-7fe4-4adb-97ee-9ac47474e96f
+	fromColumn: ResellerSales.PromotionKey
+	toColumn: Promotion.PromotionKey
+
+relationship 3f3939ce-35d8-4463-9873-bfb930b77fe5
+	fromColumn: ResellerSales.ResellerKey
+	toColumn: Reseller.ResellerKey
+
+relationship 988fbc8f-58ba-4a43-b03c-26ade3faaa80
+	fromColumn: ResellerSales.SalesTerritoryKey
+	toColumn: SalesTerritorry.SalesTerritoryKey
+
+relationship abe660bf-ba5f-4587-a328-23d816b3e0fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: OrderDate.FullDateAlternateKey
+	toColumn: LocalDateTable_28a0e7c6-64eb-43a7-bfd4-f18ddabcdf2e.Date
+
+relationship b699d2cd-2361-4256-a349-54ef87b42b45
+	fromColumn: InternetSales.OrderDateKey
+	toColumn: OrderDate.DateKey
+
+relationship b94d4b2c-6f8f-43d8-abdc-056e1c08d8ef
+	fromColumn: ResellerSales.OrderDateKey
+	toColumn: OrderDate.DateKey
+
+relationship f2f0a4cc-fd3e-4b72-8c5d-95cc7309a6ee
+	crossFilteringBehavior: bothDirections
+	fromColumn: Geography.SalesTerritoryKey
+	toColumn: SalesTerritorry.SalesTerritoryKey
+
+relationship 25a25acd-8cad-43c1-8ec9-e22f44eac98a
+	isActive: false
+	fromColumn: InternetSales.DueDateKey
+	toColumn: OrderDate.DateKey
+
+relationship 3a50c97e-8c02-497e-842e-ec7356f66269
+	isActive: false
+	fromColumn: InternetSales.ShipDateKey
+	toColumn: OrderDate.DateKey
+
+relationship 8bff948a-8e0c-a8fb-f19f-83584209656a
+	fromColumn: InternetSales.OrderDate
+	toColumn: Calendario.Date
+

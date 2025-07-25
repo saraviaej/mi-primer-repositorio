@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "61bb400477d79a830622",
+  "position": {
+    "x": 278.91637220259128,
+    "y": 209.56419316843343,
+    "z": 1000,
+    "height": 131.1660777385159,
+    "width": 723.6749116607773,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ProductCategory"
+                    }
+                  },
+                  "Property": "SpanishProductCategoryName"
+                }
+              },
+              "queryRef": "ProductCategory.SpanishProductCategoryName",
+              "nativeQueryRef": "SpanishProductCategoryName"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Internet Total OrderQuantity"
+                }
+              },
+              "queryRef": "Medidas.Internet Total OrderQuantity",
+              "nativeQueryRef": "Internet Total OrderQuantity"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Internet Total Sales Amount"
+                }
+              },
+              "queryRef": "Medidas.Internet Total Sales Amount",
+              "nativeQueryRef": "Internet Total Sales Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Maxima Venta por Internet"
+                }
+              },
+              "queryRef": "Medidas.Maxima Venta por Internet",
+              "nativeQueryRef": "Maxima Venta por Internet"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

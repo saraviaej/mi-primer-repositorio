@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "472980ef00d7684b4bcd",
+  "position": {
+    "x": 627.81844802342607,
+    "y": 37.481698389458273,
+    "z": 1000,
+    "height": 266.12005856515373,
+    "width": 537.86237188872622,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ProductCategory"
+                    }
+                  },
+                  "Property": "SpanishProductCategoryName"
+                }
+              },
+              "queryRef": "ProductCategory.SpanishProductCategoryName",
+              "nativeQueryRef": "Nombre Categoria",
+              "displayName": "Nombre Categoria"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Internet Total Sales Amount"
+                }
+              },
+              "queryRef": "Medidas.Internet Total Sales Amount",
+              "nativeQueryRef": "Internet Total Sales Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diferencia entre Internet Total Sales Amount y Prenda"
+                }
+              },
+              "queryRef": "Medidas.Diferencia entre Internet Total Sales Amount y Prenda",
+              "nativeQueryRef": "Dif",
+              "displayName": "Dif"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diferencia porcentual entre Internet Total Sales Amount y Prenda"
+                }
+              },
+              "queryRef": "Medidas.Diferencia porcentual entre Internet Total Sales Amount y Prenda",
+              "nativeQueryRef": "Dif %",
+              "displayName": "Dif %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ProductCategory"
+                  }
+                },
+                "Property": "SpanishProductCategoryName"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "138.8629664536951D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ProductCategory.SpanishProductCategoryName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "143.8683183602507D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Internet Total Sales Amount"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

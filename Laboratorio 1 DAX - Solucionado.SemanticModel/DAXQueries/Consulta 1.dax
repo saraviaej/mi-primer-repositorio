@@ -1,0 +1,4 @@
+DEFINE
+	MEASURE Medidas[Monto Venta variacion Mes] = 
+    
+CALCULATE([Internet Total Sales Amount], DATEADD( Calendario[Date], -1, MONTH))

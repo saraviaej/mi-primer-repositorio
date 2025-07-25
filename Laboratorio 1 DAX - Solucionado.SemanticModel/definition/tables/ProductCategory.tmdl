@@ -1,0 +1,60 @@
+table ProductCategory
+	lineageTag: a6a3d752-401c-4ba8-babc-6a3b4e522f52
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 434834cf-f547-43b4-ab6d-bdaf42f887a3
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: dabfd7b2-e9d4-40f7-b7b5-e6f1bf3127bc
+		summarizeBy: none
+		sourceColumn: ProductCategoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductCategoryName
+		dataType: string
+		lineageTag: c9d9d5fd-8f90-4d83-b57a-a801f168161f
+		summarizeBy: none
+		sourceColumn: EnglishProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SpanishProductCategoryName
+		dataType: string
+		lineageTag: d7dc743d-56c1-4705-a94c-61a65a35ec33
+		summarizeBy: none
+		sourceColumn: SpanishProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column FrenchProductCategoryName
+		dataType: string
+		lineageTag: dd0ed85f-186c-4daa-9f4b-558eaf50564e
+		summarizeBy: none
+		sourceColumn: FrenchProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition ProductCategory-24873455-abd7-427d-817e-1a56a659fda9 = m
+		mode: import
+		source =
+				let
+				    Origen = Access.Database(File.Contents("C:\Cibertec\Capitulo 04\08 Recursos\Fuente Datos AdventureWorks\AdventureWorks2016DB.accdb"), [CreateNavigationProperties=true]),
+				    _ProductCategory = Origen{[Schema="",Item="ProductCategory"]}[Data]
+				in
+				    _ProductCategory
+

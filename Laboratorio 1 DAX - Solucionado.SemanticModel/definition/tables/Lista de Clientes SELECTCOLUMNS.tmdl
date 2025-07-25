@@ -1,0 +1,51 @@
+table 'Lista de Clientes SELECTCOLUMNS'
+	lineageTag: 232b9654-5db5-4511-85b0-6982eafcc085
+
+	column Email
+		lineageTag: ca3545ee-ac95-467c-9b00-05cbe6aa87b2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Email]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		lineageTag: 8cf5095d-49a4-4b5d-862c-b462880132f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nombre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Apellido
+		lineageTag: 282848d7-3b3b-44d6-9a4e-d9fa12243ce6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Apellido]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		lineageTag: ac91b294-2e05-4359-81d4-bd07d9cb5005
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Direccion]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Lista de Clientes SELECTCOLUMNS' = calculated
+		mode: import
+		source = ```
+				
+				
+				 
+				    SELECTCOLUMNS(Customer,
+				    "Nombre",Customer[FirstName],
+				    "Apellido",Customer[LastName],
+				    "Email",Customer[EmailAddress],
+				    "Direccion",Customer[AddressLine1]
+				    )
+				```
+
+	annotation PBI_Id = 842f12410c5e4f109cdbd6dcce7a4447
+

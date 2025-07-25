@@ -1,0 +1,58 @@
+table Calendario
+	lineageTag: cac287d2-b2bb-446a-b032-787596d4b4d7
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: a83f7e97-6fd5-43c2-80e4-919b052017df
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: cb0616d7-4992-4688-b8b7-c31cd262be8c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NroMes
+		formatString: 0
+		lineageTag: 8bbdaebc-009d-4bcb-8fe8-2eff2c4b69c2
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [NroMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreMes
+		lineageTag: 079ae0e8-c029-4aa9-ba0e-91682451cc8d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NombreMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				
+				
+				ADDCOLUMNS(
+				CALENDAR(DATE(2010,1,1),DATE(2020,12,31)),
+				"Año", YEAR([Date]),
+				"NroMes",MONTH([Date]),
+				"NombreMes", FORMAT([Date],"mmmm")
+				
+				)
+				
+				
+				```
+
+	annotation PBI_Id = 2e9c7c3e13264332b664bfaebd668221
+
